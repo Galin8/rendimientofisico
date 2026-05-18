@@ -18,6 +18,8 @@
     "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
