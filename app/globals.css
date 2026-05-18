@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-dark: #1a472a;
+  --brand-lime: #4ade80;
+  --brand-gray: #f8f9fa;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .ad-container {
+    min-height: 250px;
+    width: 100%;
+    background: #f5f5f5;
+    @apply flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-brand-lime text-brand-dark font-display font-bold px-6 py-3 rounded-lg hover:bg-green-400 transition-colors;
+  }
+
+  .container-content {
+    @apply max-w-4xl mx-auto px-4 sm:px-6;
+  }
+}

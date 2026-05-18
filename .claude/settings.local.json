@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Force \"c:\\\\Users\\\\garci\\\\Rendimientofisico\")",
+      "Bash(Select-Object Name, Attributes)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@14 rendimientofisico --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(mv rendimientofisico/* .)",
+      "Bash(mv rendimientofisico/.* .)",
+      "Bash(rm -rf rendimientofisico)",
+      "Bash(npm install *)",
+      "Bash(npx next *)"
+    ]
+  }
+}
