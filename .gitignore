@@ -39,6 +39,9 @@ yarn-error.log*
 *.swp
 *.swo
 
+# Claude Code
+.claude/
+
 # Sitemap (generated at build)
 public/sitemap*.xml
 public/robots.txt
