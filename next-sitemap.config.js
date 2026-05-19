@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://rendimientofisico.es",
+  siteUrl: "https://rendimientofisico.com",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,
