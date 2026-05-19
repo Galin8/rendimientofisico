@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-8 border-t border-green-700 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-green-400">
-            © {new Date().getFullYear()} RendimientoFísico.es — Todos los derechos reservados
+            © {new Date().getFullYear()} RendimientoFísico.com — Todos los derechos reservados
           </p>
           <p className="text-xs text-green-500">
             La información de este sitio es orientativa. Consulta con un profesional de la salud.
