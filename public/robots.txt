@@ -1,5 +1,13 @@
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
 Disallow: /api/
 
-Sitemap: https://rendimientofisico.es/sitemap.xml
+# Host
+Host: https://rendimientofisico.com
+
+# Sitemaps
+Sitemap: https://rendimientofisico.com/sitemap.xml
