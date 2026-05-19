@@ -9,73 +9,71 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const PUBLIC_IMAGES = path.join(ROOT, "public", "images");
 
-// Keywords tuned for each article — Unsplash Source API
+// loremflickr.com/{w}/{h}/{keywords} — Flickr Creative Commons, keyword-based
 const articles = [
-  // ── NUTRICION ─────────────────────────────────────────────
-  { cat: "nutricion", slug: "ayuno-intermitente-deportistas",   q: "fasting,athlete,food,healthy" },
-  { cat: "nutricion", slug: "carbohidratos-antes-entreno",      q: "pasta,rice,carbohydrates,sport" },
-  { cat: "nutricion", slug: "dieta-keto-para-crossfit",         q: "keto,avocado,eggs,lowcarb" },
-  { cat: "nutricion", slug: "dieta-mediterranea-deportistas",   q: "mediterranean,food,olive,vegetables" },
-  { cat: "nutricion", slug: "hidratacion-deportiva",            q: "water,bottle,athlete,hydration" },
-  { cat: "nutricion", slug: "macros-para-ganar-musculo",        q: "meal,prep,muscle,nutrition" },
-  { cat: "nutricion", slug: "proteinas-cuanta-necesito",        q: "chicken,eggs,protein,food" },
-  { cat: "nutricion", slug: "proteinas-vegetales-deportistas",  q: "legumes,lentils,tofu,plant,food" },
-  { cat: "nutricion", slug: "suplementacion-vegana-crossfit",   q: "vegan,supplements,green,healthy" },
-  // ── SUPLEMENTOS ───────────────────────────────────────────
-  { cat: "suplementos", slug: "bcaa-para-que-sirven",              q: "supplement,powder,gym,jar" },
-  { cat: "suplementos", slug: "cafeina-pre-entreno",               q: "coffee,espresso,caffeine,cup" },
-  { cat: "suplementos", slug: "creatina-para-que-sirve",           q: "supplement,gym,sport,creatine" },
-  { cat: "suplementos", slug: "glutamina-para-que-sirve",          q: "supplement,protein,powder,white" },
-  { cat: "suplementos", slug: "magnesio-rendimiento-deportivo",    q: "pills,capsules,supplement,mineral" },
-  { cat: "suplementos", slug: "omega-3-deportistas",               q: "fish,oil,omega,capsules,salmon" },
-  { cat: "suplementos", slug: "proteina-whey-cual-elegir",         q: "whey,protein,shake,gym,jar" },
-  { cat: "suplementos", slug: "vitamina-d-rendimiento",            q: "sun,vitamin,outdoor,athlete,light" },
-  { cat: "suplementos", slug: "zma-testosterona-recuperacion",     q: "zinc,magnesium,supplement,recovery" },
-  // ── ENTRENAMIENTO ─────────────────────────────────────────
-  { cat: "entrenamiento", slug: "ejercicios-funcionales-crossfit",     q: "crossfit,barbell,functional,athlete" },
-  { cat: "entrenamiento", slug: "entrenamiento-fuerza-principiantes",  q: "barbell,squat,gym,beginner,strength" },
-  { cat: "entrenamiento", slug: "hiit-vs-liss-cual-es-mejor",          q: "running,sprint,cardio,track,athlete" },
-  { cat: "entrenamiento", slug: "hyrox-que-es-como-prepararse",        q: "race,functional,indoor,athlete,run" },
-  { cat: "entrenamiento", slug: "movilidad-flexibilidad-crossfit",     q: "mobility,stretch,yoga,athlete,flexibility" },
-  { cat: "entrenamiento", slug: "recuperacion-muscular-post-entreno",  q: "recovery,stretch,rest,muscle,athlete" },
-  { cat: "entrenamiento", slug: "rutina-crossfit-principiantes",       q: "crossfit,box,kettlebell,beginner,workout" },
-  // ── PERDER PESO ───────────────────────────────────────────
-  { cat: "perder-peso", slug: "ayuno-intermitente-perder-peso",    q: "clock,fasting,diet,weight,loss" },
-  { cat: "perder-peso", slug: "cardio-vs-pesas-quemar-grasa",      q: "running,weights,cardio,fat,burn" },
-  { cat: "perder-peso", slug: "deficit-calorico-como-calcularlo",  q: "scale,food,calories,measure,diet" },
-  { cat: "perder-peso", slug: "grasa-visceral-como-eliminarla",    q: "belly,exercise,abdomen,fitness,running" },
-  { cat: "perder-peso", slug: "metabolismo-basal-como-calcularlo", q: "metabolism,body,fitness,measure,health" },
+  // ── NUTRICION ─────────────────────────────────────────────────────
+  { cat: "nutricion", slug: "ayuno-intermitente-deportistas",   kw: "fasting,clock,diet,healthy,food" },
+  { cat: "nutricion", slug: "carbohidratos-antes-entreno",      kw: "carbohydrates,rice,pasta,sport,energy" },
+  { cat: "nutricion", slug: "dieta-keto-para-crossfit",         kw: "keto,avocado,eggs,lowcarb,food" },
+  { cat: "nutricion", slug: "dieta-mediterranea-deportistas",   kw: "mediterranean,olive,vegetables,salad,healthy" },
+  { cat: "nutricion", slug: "hidratacion-deportiva",            kw: "water,bottle,athlete,sport,hydration" },
+  { cat: "nutricion", slug: "macros-para-ganar-musculo",        kw: "meal,prep,nutrition,food,muscle" },
+  { cat: "nutricion", slug: "proteinas-cuanta-necesito",        kw: "chicken,eggs,protein,food,meat" },
+  { cat: "nutricion", slug: "proteinas-vegetales-deportistas",  kw: "legumes,lentils,tofu,plant,vegetables" },
+  { cat: "nutricion", slug: "suplementacion-vegana-crossfit",   kw: "vegan,green,healthy,plant,supplement" },
+  // ── SUPLEMENTOS ───────────────────────────────────────────────────
+  { cat: "suplementos", slug: "bcaa-para-que-sirven",              kw: "supplement,powder,gym,protein,sport" },
+  { cat: "suplementos", slug: "cafeina-pre-entreno",               kw: "coffee,espresso,cup,caffeine,drink" },
+  { cat: "suplementos", slug: "creatina-para-que-sirve",           kw: "supplement,protein,powder,gym,sport" },
+  { cat: "suplementos", slug: "glutamina-para-que-sirve",          kw: "supplement,capsules,pills,health,sport" },
+  { cat: "suplementos", slug: "magnesio-rendimiento-deportivo",    kw: "mineral,pills,capsules,supplement,health" },
+  { cat: "suplementos", slug: "omega-3-deportistas",               kw: "fish,salmon,omega,capsules,oil" },
+  { cat: "suplementos", slug: "proteina-whey-cual-elegir",         kw: "protein,shake,gym,fitness,supplement" },
+  { cat: "suplementos", slug: "vitamina-d-rendimiento",            kw: "sun,sunshine,sport,outdoor,athlete" },
+  { cat: "suplementos", slug: "zma-testosterona-recuperacion",     kw: "supplement,recovery,sport,health,vitamins" },
+  // ── ENTRENAMIENTO ─────────────────────────────────────────────────
+  { cat: "entrenamiento", slug: "ejercicios-funcionales-crossfit",     kw: "crossfit,barbell,weightlifting,gym,athlete" },
+  { cat: "entrenamiento", slug: "entrenamiento-fuerza-principiantes",  kw: "barbell,squat,gym,strength,lifting" },
+  { cat: "entrenamiento", slug: "hiit-vs-liss-cual-es-mejor",          kw: "running,sprint,track,athlete,cardio" },
+  { cat: "entrenamiento", slug: "hyrox-que-es-como-prepararse",        kw: "race,running,athlete,competition,fitness" },
+  { cat: "entrenamiento", slug: "movilidad-flexibilidad-crossfit",     kw: "stretching,yoga,flexibility,mobility,athlete" },
+  { cat: "entrenamiento", slug: "recuperacion-muscular-post-entreno",  kw: "recovery,stretching,rest,muscle,sport" },
+  { cat: "entrenamiento", slug: "rutina-crossfit-principiantes",       kw: "crossfit,kettlebell,workout,gym,training" },
+  // ── PERDER PESO ───────────────────────────────────────────────────
+  { cat: "perder-peso", slug: "ayuno-intermitente-perder-peso",    kw: "diet,weight,loss,healthy,food" },
+  { cat: "perder-peso", slug: "cardio-vs-pesas-quemar-grasa",      kw: "running,fitness,cardio,sport,workout" },
+  { cat: "perder-peso", slug: "deficit-calorico-como-calcularlo",  kw: "food,scale,diet,healthy,nutrition" },
+  { cat: "perder-peso", slug: "grasa-visceral-como-eliminarla",    kw: "running,exercise,fitness,sport,health" },
+  { cat: "perder-peso", slug: "metabolismo-basal-como-calcularlo", kw: "fitness,health,body,sport,metabolism" },
+  // ── OG IMAGES ─────────────────────────────────────────────────────
+  { cat: "",            slug: "og-home",              kw: "fitness,sport,nutrition,athlete,gym" },
+  { cat: "nutricion",   slug: "og-nutricion",         kw: "nutrition,healthy,food,salad,sport" },
+  { cat: "entrenamiento", slug: "og-entrenamiento",   kw: "crossfit,gym,strength,athlete,training" },
+  { cat: "suplementos",   slug: "og-suplementos",     kw: "supplement,protein,gym,sport,fitness" },
+  { cat: "perder-peso",   slug: "og-perder-peso",     kw: "diet,weight,loss,fitness,exercise" },
 ];
 
-// OG images for category pages + home
-const ogImages = [
-  { cat: "",          slug: "og-home",         q: "fitness,sport,nutrition,gym,athlete" },
-  { cat: "nutricion", slug: "og-nutricion",    q: "nutrition,healthy,food,meal,sport" },
-  { cat: "entrenamiento", slug: "og-entrenamiento", q: "crossfit,gym,strength,athlete,training" },
-  { cat: "suplementos",   slug: "og-suplementos",   q: "supplements,jar,gym,sport,protein" },
-  { cat: "perder-peso",   slug: "og-perder-peso",   q: "diet,weight,loss,fitness,exercise" },
-];
-
-const all = [...articles, ...ogImages];
-
-// ── helpers ──────────────────────────────────────────────────
+// ── helpers ───────────────────────────────────────────────────────
 
 function fetchBuffer(url, hops = 0) {
   return new Promise((resolve, reject) => {
-    if (hops > 8) return reject(new Error("Too many redirects"));
+    if (hops > 10) return reject(new Error("Too many redirects"));
     const client = url.startsWith("https") ? https : http;
     const req = client.get(url, { headers: { "User-Agent": "Mozilla/5.0" } }, (res) => {
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
-        return fetchBuffer(res.headers.location, hops + 1).then(resolve).catch(reject);
+        const next = res.headers.location.startsWith("http")
+          ? res.headers.location
+          : new URL(res.headers.location, url).href;
+        return fetchBuffer(next, hops + 1).then(resolve).catch(reject);
       }
-      if (res.statusCode !== 200) return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
+      if (res.statusCode !== 200) return reject(new Error(`HTTP ${res.statusCode}`));
       const chunks = [];
       res.on("data", (c) => chunks.push(c));
       res.on("end", () => resolve(Buffer.concat(chunks)));
       res.on("error", reject);
     });
     req.on("error", reject);
-    req.setTimeout(15000, () => { req.destroy(); reject(new Error("Timeout")); });
+    req.setTimeout(20000, () => { req.destroy(); reject(new Error("Timeout")); });
   });
 }
 
@@ -83,51 +81,42 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-async function downloadArticleImage(item) {
+async function downloadImage(item) {
   const dir = path.join(PUBLIC_IMAGES, item.cat);
   fs.mkdirSync(dir, { recursive: true });
 
   const dest = path.join(dir, `${item.slug}.webp`);
-  if (fs.existsSync(dest)) {
-    console.log(`  skip  ${item.cat}/${item.slug}.webp (exists)`);
-    return;
-  }
-
-  // Try Unsplash Source API (still works as redirect)
-  const url = `https://source.unsplash.com/1200x630/?${item.q}`;
+  // Add lock-buster seed so loremflickr doesn't serve the same cached image for similar keywords
+  const seed = Math.abs(item.slug.split("").reduce((a, c) => a + c.charCodeAt(0), 0));
+  const url = `https://loremflickr.com/1200/630/${item.kw}?lock=${seed}`;
 
   try {
     const buf = await fetchBuffer(url);
+    if (buf.length < 5000) throw new Error("Response too small — likely an error page");
     await sharp(buf)
       .resize(1200, 630, { fit: "cover", position: "attention" })
-      .webp({ quality: 82, effort: 4 })
+      .webp({ quality: 85, effort: 4 })
       .toFile(dest);
-    console.log(`  ✓     ${item.cat || "root"}/${item.slug}.webp`);
+    const kb = Math.round(fs.statSync(dest).size / 1024);
+    console.log(`  ✓  ${(item.cat || "root") + "/" + item.slug}.webp  (${kb}KB)`);
   } catch (err) {
-    // Fallback: picsum random photo
-    console.warn(`  warn  Unsplash failed (${err.message}), trying picsum…`);
-    try {
-      const seed = Math.abs(item.slug.split("").reduce((a, c) => a + c.charCodeAt(0), 0));
-      const fallback = `https://picsum.photos/seed/${seed}/1200/630`;
-      const buf = await fetchBuffer(fallback);
-      await sharp(buf)
-        .resize(1200, 630, { fit: "cover" })
-        .webp({ quality: 82 })
-        .toFile(dest);
-      console.log(`  ✓ (picsum) ${item.cat || "root"}/${item.slug}.webp`);
-    } catch (e2) {
-      console.error(`  ✗     ${item.cat || "root"}/${item.slug}.webp — ${e2.message}`);
-    }
+    console.error(`  ✗  ${item.slug} — ${err.message}`);
   }
 }
 
-// ── main ─────────────────────────────────────────────────────
+// ── main ─────────────────────────────────────────────────────────
 
-console.log(`Downloading ${all.length} images (1200×630 WebP)…\n`);
+console.log(`\nDownloading ${articles.length} thematic images from loremflickr (1200×630 WebP)…\n`);
 
-for (const item of all) {
-  await downloadArticleImage(item);
-  await sleep(400); // polite delay to avoid rate limiting
+for (const item of articles) {
+  await downloadImage(item);
+  await sleep(500); // polite delay
 }
 
-console.log("\nDone.");
+const total = articles.length;
+const ok = articles.filter(a => {
+  const f = path.join(PUBLIC_IMAGES, a.cat, `${a.slug}.webp`);
+  return fs.existsSync(f);
+}).length;
+
+console.log(`\nDone: ${ok}/${total} images downloaded.\n`);
