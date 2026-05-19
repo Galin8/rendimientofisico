@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Nutrición Deportiva: Guías y Consejos para Atletas",
   description:
     "Aprende sobre nutrición deportiva, dieta para CrossFit, macros para ganar músculo y estrategias de alimentación basadas en evidencia científica.",
-  alternates: { canonical: "https://rendimientofisico.es/nutricion" },
+  alternates: { canonical: "https://rendimientofisico.com/nutricion" },
   openGraph: {
     title: "Nutrición Deportiva — Rendimiento Físico",
     description:
       "Guías completas sobre alimentación deportiva, macros, timing de nutrientes y dietas para mejorar tu rendimiento.",
-    url: "https://rendimientofisico.es/nutricion",
+    url: "https://rendimientofisico.com/nutricion",
     images: [{ url: "/images/nutricion/og-nutricion.webp", width: 1200, height: 630, alt: "Nutrición deportiva" }],
   },
 };
@@ -25,8 +25,8 @@ const categorySchema = {
   "@type": "CollectionPage",
   name: "Nutrición Deportiva",
   description: "Guías de nutrición para deportistas y atletas",
-  url: "https://rendimientofisico.es/nutricion",
-  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.es" },
+  url: "https://rendimientofisico.com/nutricion",
+  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.com" },
 };
 
 export default function NutricionPage() {

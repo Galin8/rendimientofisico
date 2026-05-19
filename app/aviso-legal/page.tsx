@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Aviso Legal — Rendimiento Físico",
   description: "Aviso legal y condiciones de uso de Rendimiento Físico.",
-  alternates: { canonical: "https://rendimientofisico.es/aviso-legal" },
+  alternates: { canonical: "https://rendimientofisico.com/aviso-legal" },
   robots: { index: false, follow: false },
 };
 
@@ -27,13 +27,13 @@ export default function AvisoLegalPage() {
             En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio,
             de Servicios de la Sociedad de la Información y Comercio Electrónico
             (LSSI-CE), se informa que el titular de este sitio web es el
-            responsable de <strong>rendimientofisico.es</strong>.
+            responsable de <strong>rendimientofisico.com</strong>.
           </p>
 
           <h2>2. Objeto y ámbito de aplicación</h2>
           <p>
             El presente aviso legal regula el acceso y uso del sitio web
-            rendimientofisico.es. El acceso y uso de este sitio implica la
+            rendimientofisico.com. El acceso y uso de este sitio implica la
             aceptación plena de estas condiciones.
           </p>
 

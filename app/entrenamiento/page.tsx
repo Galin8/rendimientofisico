@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Entrenamiento: CrossFit, Hyrox y Rutinas de Fuerza",
   description:
     "Guías de entrenamiento para CrossFit, Hyrox, rutinas de fuerza y metodologías de rendimiento físico. Programas basados en ciencia del ejercicio.",
-  alternates: { canonical: "https://rendimientofisico.es/entrenamiento" },
+  alternates: { canonical: "https://rendimientofisico.com/entrenamiento" },
   openGraph: {
     title: "Entrenamiento Deportivo — Rendimiento Físico",
     description:
       "CrossFit, Hyrox, rutinas de fuerza y metodologías de entrenamiento para mejorar tu rendimiento físico.",
-    url: "https://rendimientofisico.es/entrenamiento",
+    url: "https://rendimientofisico.com/entrenamiento",
     images: [{ url: "/images/entrenamiento/og-entrenamiento.webp", width: 1200, height: 630, alt: "Entrenamiento deportivo" }],
   },
 };
@@ -25,8 +25,8 @@ const categorySchema = {
   "@type": "CollectionPage",
   name: "Entrenamiento Deportivo",
   description: "Guías de CrossFit, Hyrox y rutinas de fuerza",
-  url: "https://rendimientofisico.es/entrenamiento",
-  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.es" },
+  url: "https://rendimientofisico.com/entrenamiento",
+  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.com" },
 };
 
 export default function EntrenamientoPage() {

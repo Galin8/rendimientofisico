@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Suplementos Deportivos: Qué Funciona y Qué No",
   description:
     "Guías sobre creatina, proteína whey, cafeína y otros suplementos deportivos. Evidencia científica sobre qué suplementos realmente funcionan.",
-  alternates: { canonical: "https://rendimientofisico.es/suplementos" },
+  alternates: { canonical: "https://rendimientofisico.com/suplementos" },
   openGraph: {
     title: "Suplementos Deportivos — Rendimiento Físico",
     description:
       "Creatina, proteína whey, cafeína y más. Guías basadas en evidencia sobre suplementación deportiva.",
-    url: "https://rendimientofisico.es/suplementos",
+    url: "https://rendimientofisico.com/suplementos",
     images: [{ url: "/images/suplementos/og-suplementos.webp", width: 1200, height: 630, alt: "Suplementos deportivos" }],
   },
 };
@@ -25,8 +25,8 @@ const categorySchema = {
   "@type": "CollectionPage",
   name: "Suplementos Deportivos",
   description: "Guías sobre suplementación deportiva basadas en evidencia",
-  url: "https://rendimientofisico.es/suplementos",
-  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.es" },
+  url: "https://rendimientofisico.com/suplementos",
+  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.com" },
 };
 
 export default function SuplementosPage() {

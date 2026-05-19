@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = getArticle(category as Category, slug);
   if (!article) return {};
 
-  const canonical = `https://rendimientofisico.es/${category}/${slug}`;
+  const canonical = `https://rendimientofisico.com/${category}/${slug}`;
 
   return {
     title: article.title,
@@ -79,7 +79,7 @@ export default function ArticlePage({ params }: PageProps) {
   if (!article) notFound();
 
   const categoryLabel = CATEGORY_LABELS[category as Category];
-  const canonical = `https://rendimientofisico.es/${category}/${slug}`;
+  const canonical = `https://rendimientofisico.com/${category}/${slug}`;
   const formattedDate = new Date(article.date).toLocaleDateString("es-ES", {
     year: "numeric",
     month: "long",
@@ -91,18 +91,18 @@ export default function ArticlePage({ params }: PageProps) {
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: `https://rendimientofisico.es${article.image}`,
+    image: `https://rendimientofisico.com${article.image}`,
     datePublished: article.date,
     dateModified: article.date,
     author: {
       "@type": "Organization",
       name: article.author,
-      url: "https://rendimientofisico.es",
+      url: "https://rendimientofisico.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Rendimiento Físico",
-      url: "https://rendimientofisico.es",
+      url: "https://rendimientofisico.com",
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     keywords: article.keywords.join(", "),

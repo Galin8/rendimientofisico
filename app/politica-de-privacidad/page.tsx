@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Política de Privacidad — Rendimiento Físico",
   description: "Política de privacidad y protección de datos de Rendimiento Físico conforme al RGPD.",
-  alternates: { canonical: "https://rendimientofisico.es/politica-de-privacidad" },
+  alternates: { canonical: "https://rendimientofisico.com/politica-de-privacidad" },
   robots: { index: false, follow: false },
 };
 
@@ -27,7 +27,7 @@ export default function PoliticaPrivacidadPage() {
           <h2>1. Responsable del tratamiento</h2>
           <p>
             El responsable del tratamiento de los datos personales recogidos a través de{" "}
-            <strong>rendimientofisico.es</strong> es el titular del sitio web.
+            <strong>rendimientofisico.com</strong> es el titular del sitio web.
           </p>
 
           <h2>2. Datos que recopilamos</h2>

@@ -14,12 +14,12 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://rendimientofisico.es" },
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://rendimientofisico.com" },
       ...items.map((item, i) => ({
         "@type": "ListItem",
         position: i + 2,
         name: item.label,
-        ...(item.href && { item: `https://rendimientofisico.es${item.href}` }),
+        ...(item.href && { item: `https://rendimientofisico.com${item.href}` }),
       })),
     ],
   };

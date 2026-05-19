@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Sobre Nosotros — Rendimiento Físico",
   description:
     "Conoce al equipo detrás de Rendimiento Físico. Expertos en nutrición deportiva, entrenamiento y suplementación comprometidos con la evidencia científica.",
-  alternates: { canonical: "https://rendimientofisico.es/sobre-nosotros" },
+  alternates: { canonical: "https://rendimientofisico.com/sobre-nosotros" },
   openGraph: {
     title: "Sobre Nosotros — Rendimiento Físico",
     description: "Equipo de expertos en nutrición deportiva y entrenamiento basado en evidencia.",
-    url: "https://rendimientofisico.es/sobre-nosotros",
+    url: "https://rendimientofisico.com/sobre-nosotros",
   },
 };
 

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Perder Peso: Déficit Calórico y Pérdida de Grasa Efectiva",
   description:
     "Estrategias basadas en evidencia para perder grasa sin perder músculo. Déficit calórico, recomposición corporal y pérdida de peso sostenible.",
-  alternates: { canonical: "https://rendimientofisico.es/perder-peso" },
+  alternates: { canonical: "https://rendimientofisico.com/perder-peso" },
   openGraph: {
     title: "Perder Peso y Grasa — Rendimiento Físico",
     description:
       "Déficit calórico, recomposición corporal y pérdida de grasa sostenible. Guías basadas en evidencia científica.",
-    url: "https://rendimientofisico.es/perder-peso",
+    url: "https://rendimientofisico.com/perder-peso",
     images: [{ url: "/images/perder-peso/og-perder-peso.webp", width: 1200, height: 630, alt: "Perder peso y grasa" }],
   },
 };
@@ -25,8 +25,8 @@ const categorySchema = {
   "@type": "CollectionPage",
   name: "Perder Peso y Grasa",
   description: "Estrategias de pérdida de grasa y recomposición corporal",
-  url: "https://rendimientofisico.es/perder-peso",
-  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.es" },
+  url: "https://rendimientofisico.com/perder-peso",
+  isPartOf: { "@type": "WebSite", url: "https://rendimientofisico.com" },
 };
 
 export default function PerderPesoPage() {

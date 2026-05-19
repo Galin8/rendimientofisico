@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Contacto — Rendimiento Físico",
   description:
     "Contacta con el equipo de Rendimiento Físico. Preguntas, colaboraciones o sugerencias de contenido sobre nutrición deportiva y entrenamiento.",
-  alternates: { canonical: "https://rendimientofisico.es/contacto" },
+  alternates: { canonical: "https://rendimientofisico.com/contacto" },
   openGraph: {
     title: "Contacto — Rendimiento Físico",
     description: "Ponte en contacto con el equipo de Rendimiento Físico.",
-    url: "https://rendimientofisico.es/contacto",
+    url: "https://rendimientofisico.com/contacto",
   },
 };
 

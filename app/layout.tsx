@@ -17,7 +17,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://rendimientofisico.es";
+const SITE_URL = "https://rendimientofisico.com";
 const ADSENSE_ID = "ca-pub-9649239009303767";
 const GA4_ID = "G-XXXXXXXXXX";
 
@@ -39,9 +39,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@rendimientofis",
-  },
-  verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
   },
 };
 

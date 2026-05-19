@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Rendimiento Físico — Nutrición y Entrenamiento Deportivo",
   description:
     "Guías de nutrición deportiva, suplementación, CrossFit y pérdida de grasa basadas en evidencia. Mejora tu rendimiento y físico.",
-  alternates: { canonical: "https://rendimientofisico.es" },
+  alternates: { canonical: "https://rendimientofisico.com" },
   openGraph: {
     title: "Rendimiento Físico — Nutrición y Entrenamiento Deportivo",
     description:
       "Guías de nutrición deportiva, suplementación, CrossFit y pérdida de grasa basadas en evidencia.",
-    url: "https://rendimientofisico.es",
+    url: "https://rendimientofisico.com",
     images: [
       {
         url: "/images/og-home.webp",
