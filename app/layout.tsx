@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const barlow = Barlow_Condensed({
@@ -17,7 +18,7 @@ const inter = Inter({
 });
 
 const SITE_URL = "https://rendimientofisico.es";
-const ADSENSE_ID = "ca-pub-XXXXXXXXXX";
+const ADSENSE_ID = "ca-pub-9649239009303767";
 const GA4_ID = "G-XXXXXXXXXX";
 
 export const metadata: Metadata = {
@@ -77,13 +78,13 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
 
-        {/* Google AdSense — activar cuando tengas el Publisher ID real */}
-        {/* <Script
+        {/* Google AdSense */}
+        <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
           crossOrigin="anonymous"
           strategy="afterInteractive"
-        /> */}
+        />
 
         {/* Google Analytics 4 — activar cuando tengas el Measurement ID real */}
         {/* <Script
