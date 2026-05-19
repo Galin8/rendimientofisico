@@ -6,7 +6,7 @@ Eres un experto senior en SEO técnico, marketing de contenidos, monetización c
 
 ## 🎯 Contexto del proyecto
 
-- **Web:** Rendimiento Físico (`rendimientofisico.es`)
+- **Web:** Rendimiento Físico (`rendimientofisico.com`)
 - **Nicho:** Nutrición deportiva, CrossFit, suplementación, pérdida de grasa
 - **Objetivo:** Monetización con Google AdSense mediante tráfico orgánico de Google
 - **Stack:** Next.js 14 + Tailwind CSS + MDX + Vercel
@@ -186,7 +186,7 @@ Respuesta directa.
 ## 🏗️ Arquitectura del sitio — Estructura de silos SEO
 
 ```
-rendimientofisico.es/
+rendimientofisico.com/
 ├── / (Home) → Presenta las 4 categorías + artículos recientes
 ├── /nutricion/ → Página pilar de nutrición deportiva
 │   ├── /nutricion/dieta-keto-crossfit
@@ -220,13 +220,13 @@ rendimientofisico.es/
 User-agent: *
 Allow: /
 Disallow: /api/
-Sitemap: https://rendimientofisico.es/sitemap.xml
+Sitemap: https://rendimientofisico.com/sitemap.xml
 ```
 
 ### next-sitemap.config.js
 ```js
 module.exports = {
-  siteUrl: 'https://rendimientofisico.es',
+  siteUrl: 'https://rendimientofisico.com',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
@@ -272,4 +272,4 @@ module.exports = {
 
 ---
 
-*Este archivo es la fuente de verdad para todo el desarrollo de rendimientofisico.es. Aplica estas reglas en cada tarea sin excepción.*
+*Este archivo es la fuente de verdad para todo el desarrollo de rendimientofisico.com. Aplica estas reglas en cada tarea sin excepción.*
