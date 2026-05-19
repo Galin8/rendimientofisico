@@ -18,6 +18,13 @@ const categoryLabels: Record<string, string> = {
   "perder-peso": "Perder Peso",
 };
 
+const categoryColors: Record<string, string> = {
+  nutricion: "bg-emerald-50 text-emerald-700",
+  entrenamiento: "bg-blue-50 text-blue-700",
+  suplementos: "bg-purple-50 text-purple-700",
+  "perder-peso": "bg-orange-50 text-orange-700",
+};
+
 export default function ArticleCard({
   title,
   description,
@@ -29,48 +36,62 @@ export default function ArticleCard({
 }: ArticleCardProps) {
   const href = `/${category}/${slug}`;
   const formattedDate = new Date(date).toLocaleDateString("es-ES", {
-    year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
+    year: "numeric",
   });
 
+  const chipColor = categoryColors[category] ?? "bg-green-50 text-brand-dark";
+
   return (
-    <article className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-      <Link href={href} className="block">
-        <div className="relative aspect-[16/9] w-full">
+    <article className="group bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:border-gray-200">
+      {/* Image — aspect-[16/9] reserves space before image loads → no CLS */}
+      <Link href={href} className="block overflow-hidden">
+        <div className="relative aspect-[16/9] w-full bg-gray-100">
           <Image
             src={image}
             alt={imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       </Link>
+
       <div className="p-5">
-        <div className="flex items-center gap-3 mb-3">
+        {/* Meta row */}
+        <div className="flex items-center gap-2 mb-3">
           <Link
             href={`/${category}`}
-            className="text-xs font-display font-bold uppercase tracking-wider text-brand-dark bg-green-50 px-2 py-1 rounded hover:bg-green-100 transition-colors"
+            className={`text-xs font-display font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${chipColor} hover:opacity-80 transition-opacity`}
           >
             {categoryLabels[category] ?? category}
           </Link>
-          <time dateTime={date} className="text-xs text-gray-400">
+          <time dateTime={date} className="text-xs text-gray-400 ml-auto">
             {formattedDate}
           </time>
         </div>
+
+        {/* Title */}
         <Link href={href}>
-          <h3 className="font-display font-bold text-lg text-gray-900 leading-tight hover:text-brand-dark transition-colors mb-2">
+          <h3 className="font-display font-bold text-[1.05rem] text-gray-900 leading-snug hover:text-brand-dark transition-colors mb-2 line-clamp-2">
             {title}
           </h3>
         </Link>
-        <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">{description}</p>
+
+        {/* Excerpt */}
+        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-4">
+          {description}
+        </p>
+
+        {/* CTA */}
         <Link
           href={href}
-          className="inline-block mt-4 text-sm font-semibold text-brand-dark hover:text-green-700 transition-colors"
-          aria-label={`Leer artículo: ${title}`}
+          className="inline-flex items-center gap-1 text-sm font-semibold text-brand-dark group-hover:gap-2 transition-all duration-150"
+          aria-label={`Leer: ${title}`}
         >
-          Leer artículo →
+          Leer artículo
+          <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
         </Link>
       </div>
     </article>
