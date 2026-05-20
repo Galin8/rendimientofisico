@@ -19,7 +19,9 @@ export default function ContactoPage() {
         <h1 className="font-display font-bold text-4xl text-brand-dark mb-4">
           Contacto
         </h1>
-        <p className="text-gray-500">Próximamente.</p>
+        <p className="text-gray-500">
+          Estamos trabajando en esta sección. Próximamente disponible.
+        </p>
       </main>
       <Footer />
     </>
