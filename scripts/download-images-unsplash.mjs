@@ -31,6 +31,7 @@ const articles = [
   { cat: "nutricion", slug: "proteinas-cuanta-necesito",        q: "chicken breast eggs protein food" },
   { cat: "nutricion", slug: "proteinas-vegetales-deportistas",  q: "legumes lentils plant protein food" },
   { cat: "nutricion", slug: "suplementacion-vegana-crossfit",   q: "vegan plant food green healthy" },
+  { cat: "nutricion", slug: "alimentacion-pre-competicion",    q: "athlete meal prep competition food race" },
   // ── SUPLEMENTOS ────────────────────────────────────────────────────
   { cat: "suplementos", slug: "bcaa-para-que-sirven",              q: "supplement powder gym protein jar" },
   { cat: "suplementos", slug: "cafeina-pre-entreno",               q: "espresso coffee cup close up" },
@@ -41,6 +42,7 @@ const articles = [
   { cat: "suplementos", slug: "proteina-whey-cual-elegir",         q: "whey protein shake gym fitness" },
   { cat: "suplementos", slug: "vitamina-d-rendimiento",            q: "sunshine outdoor sport vitamin d" },
   { cat: "suplementos", slug: "zma-testosterona-recuperacion",     q: "supplement recovery sport health" },
+  { cat: "suplementos", slug: "beta-alanina-rendimiento",          q: "supplement powder pre workout gym" },
   // ── ENTRENAMIENTO ──────────────────────────────────────────────────
   { cat: "entrenamiento", slug: "ejercicios-funcionales-crossfit",     q: "crossfit barbell functional athlete" },
   { cat: "entrenamiento", slug: "entrenamiento-fuerza-principiantes",  q: "barbell squat gym strength training" },
@@ -48,7 +50,8 @@ const articles = [
   { cat: "entrenamiento", slug: "hyrox-que-es-como-prepararse",        q: "functional fitness race indoor athlete" },
   { cat: "entrenamiento", slug: "movilidad-flexibilidad-crossfit",     q: "mobility flexibility yoga stretch athlete" },
   { cat: "entrenamiento", slug: "recuperacion-muscular-post-entreno",  q: "muscle recovery stretching sport rest" },
-  { cat: "entrenamiento", slug: "rutina-crossfit-principiantes",       q: "crossfit workout kettlebell box gym" },
+  { cat: "entrenamiento", slug: "rutina-crossfit-principiantes",           q: "crossfit workout kettlebell box gym" },
+  { cat: "entrenamiento", slug: "periodizacion-entrenamiento-crossfit",  q: "crossfit training planning periodization athlete" },
   // ── PERDER PESO ────────────────────────────────────────────────────
   { cat: "perder-peso", slug: "ayuno-intermitente-perder-peso",    q: "fasting weight loss diet healthy" },
   { cat: "perder-peso", slug: "cardio-vs-pesas-quemar-grasa",      q: "gym weights running cardio fat burn" },
