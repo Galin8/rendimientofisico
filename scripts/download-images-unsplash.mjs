@@ -42,7 +42,7 @@ const articles = [
   { cat: "suplementos", slug: "proteina-whey-cual-elegir",         q: "whey protein shake gym fitness" },
   { cat: "suplementos", slug: "vitamina-d-rendimiento",            q: "sunshine outdoor sport vitamin d" },
   { cat: "suplementos", slug: "zma-testosterona-recuperacion",     q: "supplement recovery sport health" },
-  { cat: "suplementos", slug: "beta-alanina-rendimiento",          q: "supplement powder pre workout gym" },
+  { cat: "suplementos", slug: "beta-alanina-rendimiento",          q: "protein powder scoop sport" },
   // ── ENTRENAMIENTO ──────────────────────────────────────────────────
   { cat: "entrenamiento", slug: "ejercicios-funcionales-crossfit",     q: "crossfit barbell functional athlete" },
   { cat: "entrenamiento", slug: "entrenamiento-fuerza-principiantes",  q: "barbell squat gym strength training" },
