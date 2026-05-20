@@ -19,7 +19,7 @@ const inter = Inter({
 
 const SITE_URL = "https://rendimientofisico.com";
 const ADSENSE_ID = "ca-pub-9649239009303767";
-const GA4_ID = "G-XXXXXXXXXX";
+const GA4_ID = "G-9VLZFTQ73R";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -83,8 +83,8 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* Google Analytics 4 — activar cuando tengas el Measurement ID real */}
-        {/* <Script
+        {/* Google Analytics 4 */}
+        <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
           strategy="afterInteractive"
         />
@@ -97,7 +97,7 @@ export default function RootLayout({
               send_page_view: true,
             });
           `}
-        </Script> */}
+        </Script>
       </body>
     </html>
   );
