@@ -32,6 +32,7 @@ const articles = [
   { cat: "nutricion", slug: "proteinas-vegetales-deportistas",  q: "legumes lentils plant protein food" },
   { cat: "nutricion", slug: "suplementacion-vegana-crossfit",   q: "vegan plant food green healthy" },
   { cat: "nutricion", slug: "alimentacion-pre-competicion",    q: "athlete meal prep competition food race" },
+  { cat: "nutricion", slug: "dieta-para-ganar-masa-muscular",  q: "chicken rice eggs protein muscle food" },
   // ── SUPLEMENTOS ────────────────────────────────────────────────────
   { cat: "suplementos", slug: "bcaa-para-que-sirven",              q: "supplement powder gym protein jar" },
   { cat: "suplementos", slug: "cafeina-pre-entreno",               q: "espresso coffee cup close up" },
