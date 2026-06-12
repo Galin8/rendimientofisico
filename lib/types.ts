@@ -1,4 +1,4 @@
-export type Category = "nutricion" | "entrenamiento" | "suplementos" | "perder-peso";
+export type Category = "nutricion" | "entrenamiento" | "suplementos" | "perder-peso" | "recetas";
 
 export interface ArticleMeta {
   title: string;

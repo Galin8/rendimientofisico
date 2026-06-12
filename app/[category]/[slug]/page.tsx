@@ -14,6 +14,7 @@ const VALID_CATEGORIES: Category[] = [
   "entrenamiento",
   "suplementos",
   "perder-peso",
+  "recetas",
 ];
 
 const CATEGORY_LABELS: Record<Category, string> = {
@@ -21,6 +22,7 @@ const CATEGORY_LABELS: Record<Category, string> = {
   entrenamiento: "Entrenamiento",
   suplementos: "Suplementos",
   "perder-peso": "Perder Peso",
+  recetas: "Recetas",
 };
 
 interface PageProps {

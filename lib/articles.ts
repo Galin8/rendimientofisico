@@ -45,7 +45,7 @@ export function getArticle(category: Category, slug: string): Article | null {
 }
 
 export function getAllArticles(): ArticleMeta[] {
-  const categories: Category[] = ["nutricion", "entrenamiento", "suplementos", "perder-peso"];
+  const categories: Category[] = ["nutricion", "entrenamiento", "suplementos", "perder-peso", "recetas"];
   return categories
     .flatMap(getArticlesByCategory)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
