@@ -8,6 +8,7 @@ const nav = [
   { label: "Entrenamiento", href: "/entrenamiento" },
   { label: "Suplementos", href: "/suplementos" },
   { label: "Perder Peso", href: "/perder-peso" },
+  { label: "Recetas", href: "/recetas" },
 ];
 
 export default function Header() {

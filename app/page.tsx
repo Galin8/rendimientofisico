@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import AdSense from "@/components/AdSense";
 import { ArticleCardSkeleton } from "@/components/Skeleton";
-import { getRecentArticles } from "@/lib/articles";
+import { getRecentArticles, getAllArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Rendimiento Físico — Nutrición y Entrenamiento Deportivo",
@@ -113,13 +113,13 @@ const categories = [
   },
 ];
 
-const stats = [
-  { value: "30", label: "artículos" },
-  { value: "4", label: "categorías" },
-  { value: "100%", label: "basado en evidencia" },
-];
-
-export default function HomePage() {
+export default async function HomePage() {
+  const articleCount = getAllArticles().length;
+  const stats = [
+    { value: String(articleCount), label: "artículos" },
+    { value: "5", label: "categorías" },
+    { value: "100%", label: "basado en evidencia" },
+  ];
   return (
     <>
       <Header />
@@ -295,9 +295,9 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { n: "30+", t: "artículos publicados" },
+                  { n: `${articleCount}+`, t: "artículos publicados" },
                   { n: "100%", t: "fuentes citadas" },
-                  { n: "4", t: "categorías" },
+                  { n: "5", t: "categorías" },
                   { n: "0", t: "suplementos milagro" },
                 ].map((item) => (
                   <div
