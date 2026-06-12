@@ -59,12 +59,31 @@ const articles = [
   { cat: "perder-peso", slug: "deficit-calorico-como-calcularlo",  q: "healthy food scale portion diet" },
   { cat: "perder-peso", slug: "grasa-visceral-como-eliminarla",    q: "running exercise fitness belly health" },
   { cat: "perder-peso", slug: "metabolismo-basal-como-calcularlo", q: "fitness gym body metabolism sport" },
+  { cat: "perder-peso", slug: "perder-grasa-sin-perder-musculo",  q: "athlete lean muscle definition fitness" },
+  // ── NUEVOS NUTRICION ───────────────────────────────────────────────
+  { cat: "nutricion", slug: "que-comer-despues-de-entrenar",       q: "post workout meal protein food recovery" },
+  { cat: "nutricion", slug: "alimentos-que-aceleran-el-metabolismo", q: "thermogenic food spices metabolism healthy" },
+  // ── NUEVOS SUPLEMENTOS ─────────────────────────────────────────────
+  { cat: "suplementos", slug: "pre-entreno-casero-sin-suplementos", q: "coffee beetroot natural energy preworkout" },
+  { cat: "suplementos", slug: "colageno-para-deportistas",          q: "collagen joint health sport recovery" },
+  { cat: "suplementos", slug: "vitaminas-para-deportistas",         q: "vitamins minerals supplement health sport" },
+  // ── NUEVOS ENTRENAMIENTO ───────────────────────────────────────────
+  { cat: "entrenamiento", slug: "errores-comunes-crossfit",           q: "crossfit athlete workout barbell gym" },
+  { cat: "entrenamiento", slug: "como-mejorar-vo2-max",               q: "running cardio endurance athlete trail" },
+  { cat: "entrenamiento", slug: "entrenamiento-en-casa-sin-material", q: "home workout bodyweight exercise floor" },
+  // ── NUEVAS RECETAS ─────────────────────────────────────────────────
+  { cat: "recetas", slug: "batido-proteico-casero",      q: "protein smoothie shake fruit yogurt blender" },
+  { cat: "recetas", slug: "meal-prep-semanal-crossfit",  q: "meal prep containers food tupperware chicken rice" },
+  { cat: "recetas", slug: "snacks-altos-en-proteina",    q: "healthy snacks eggs nuts yogurt protein" },
+  { cat: "recetas", slug: "recetas-keto-ganar-musculo",  q: "keto food avocado eggs meat low carb" },
+  { cat: "recetas", slug: "desayunos-pre-entrenamiento", q: "breakfast oats eggs fruit athlete morning" },
   // ── OG IMAGES ──────────────────────────────────────────────────────
   { cat: "",              slug: "og-home",              q: "fitness sport athlete gym training" },
   { cat: "nutricion",     slug: "og-nutricion",         q: "healthy nutrition food sport meal" },
   { cat: "entrenamiento", slug: "og-entrenamiento",     q: "crossfit gym strength training athlete" },
   { cat: "suplementos",   slug: "og-suplementos",       q: "supplement protein powder gym sport" },
   { cat: "perder-peso",   slug: "og-perder-peso",       q: "weight loss fitness healthy running" },
+  { cat: "recetas",       slug: "og-recetas",           q: "food meal prep healthy cooking sport" },
 ];
 
 // ── helpers ──────────────────────────────────────────────────────
