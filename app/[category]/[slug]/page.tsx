@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -97,9 +98,9 @@ export default function ArticlePage({ params }: PageProps) {
     datePublished: article.date,
     dateModified: article.date,
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: article.author,
-      url: "https://rendimientofisico.com",
+      url: "https://rendimientofisico.com/autor/victor-garcia",
     },
     publisher: {
       "@type": "Organization",
@@ -131,20 +132,34 @@ export default function ArticlePage({ params }: PageProps) {
             <span className="text-xs font-display font-bold uppercase tracking-wider text-brand-dark bg-green-50 px-2 py-1 rounded">
               {categoryLabel}
             </span>
-            <time dateTime={article.date} className="text-xs text-gray-400">
-              {formattedDate}
-            </time>
-            <span className="text-xs text-gray-400">
-              {article.readingTime} min de lectura
-            </span>
           </div>
 
           <h1 className="font-display font-bold text-3xl md:text-4xl text-gray-900 leading-tight mb-4">
             {article.title}
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          <p className="text-lg text-gray-600 leading-relaxed mb-4">
             {article.description}
           </p>
+
+          {/* Author byline */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="w-8 h-8 rounded-full bg-brand-dark text-brand-lime font-display font-bold text-xs flex items-center justify-center shrink-0">
+              VG
+            </span>
+            <span className="text-sm text-gray-500">
+              Por{" "}
+              <Link
+                href="/autor/victor-garcia"
+                className="font-semibold text-gray-800 hover:text-brand-dark transition-colors"
+              >
+                {article.author}
+              </Link>
+              {" · "}
+              <time dateTime={article.date}>{formattedDate}</time>
+              {" · "}
+              {article.readingTime} min de lectura
+            </span>
+          </div>
 
           {/* Hero image — priority para LCP */}
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
@@ -172,7 +187,20 @@ export default function ArticlePage({ params }: PageProps) {
 
         {/* Author & date footer */}
         <footer className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between text-sm text-gray-400">
-          <span>Por {article.author}</span>
+          <Link
+            href="/autor/victor-garcia"
+            className="flex items-center gap-3 group"
+          >
+            <span className="w-9 h-9 rounded-full bg-brand-dark text-brand-lime font-display font-bold text-xs flex items-center justify-center shrink-0">
+              VG
+            </span>
+            <span>
+              <span className="block text-gray-800 font-semibold group-hover:text-brand-dark transition-colors">
+                {article.author}
+              </span>
+              <span className="text-xs text-gray-400">Fundador, Rendimiento Físico</span>
+            </span>
+          </Link>
           <time dateTime={article.date}>{formattedDate}</time>
         </footer>
       </main>
