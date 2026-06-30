@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Aviso Legal — Rendimiento Físico",
   description: "Aviso legal y condiciones de uso de Rendimiento Físico.",
   alternates: { canonical: "https://rendimientofisico.com/aviso-legal" },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function AvisoLegalPage() {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Política de Privacidad — Rendimiento Físico",
   description: "Política de privacidad y protección de datos de Rendimiento Físico conforme al RGPD.",
   alternates: { canonical: "https://rendimientofisico.com/politica-de-privacidad" },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function PoliticaPrivacidadPage() {
