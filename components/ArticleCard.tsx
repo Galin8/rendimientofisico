@@ -16,6 +16,7 @@ const categoryLabels: Record<string, string> = {
   entrenamiento: "Entrenamiento",
   suplementos: "Suplementos",
   "perder-peso": "Perder Peso",
+  recetas: "Recetas",
 };
 
 const categoryColors: Record<string, string> = {
@@ -23,6 +24,7 @@ const categoryColors: Record<string, string> = {
   entrenamiento: "bg-blue-50 text-blue-700",
   suplementos: "bg-purple-50 text-purple-700",
   "perder-peso": "bg-orange-50 text-orange-700",
+  recetas: "bg-amber-50 text-amber-700",
 };
 
 export default function ArticleCard({
