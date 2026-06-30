@@ -25,7 +25,7 @@ const targets = [
   { cat: "perder-peso",   slug: "cardio-vs-pesas-quemar-grasa",      q: "woman running outdoor jogging cardio park" },
   { cat: "perder-peso",   slug: "metabolismo-basal-como-calcularlo", q: "body composition measurement fitness health" },
   { cat: "entrenamiento", slug: "como-mejorar-vo2-max",              q: "interval training track stadium cardio endurance runner" },
-  { cat: "perder-peso",   slug: "grasa-visceral-como-eliminarla",    q: "belly waist tape measure fitness workout" },
+  { cat: "perder-peso",   slug: "grasa-visceral-como-eliminarla",    q: "fitness running park outdoor exercise health" },
   { cat: "entrenamiento", slug: "periodizacion-entrenamiento-crossfit", q: "training plan programming whiteboard sport" },
   { cat: "suplementos",   slug: "zma-testosterona-recuperacion",     q: "sleep rest recovery bed sport athlete" },
   { cat: "perder-peso",   slug: "ayuno-intermitente-perder-peso",    q: "empty plate clock fasting diet intermittent" },
@@ -33,7 +33,13 @@ const targets = [
   { cat: "recetas",       slug: "recetas-keto-ganar-musculo",        q: "steak avocado ketogenic low carb meat dinner" },
   { cat: "suplementos",   slug: "bcaa-para-que-sirven",              q: "amino acid capsule supplement bottle gym" },
   { cat: "suplementos",   slug: "beta-alanina-rendimiento",          q: "endurance runner fatigue sport track race" },
-  { cat: "suplementos",   slug: "magnesio-rendimiento-deportivo",    q: "dark chocolate banana magnesium mineral food" },
+  { cat: "suplementos",   slug: "magnesio-rendimiento-deportivo",    q: "minerals supplement green vegetables nutrition health" },
+  // new articles 2026-06-18
+  { cat: "nutricion",     slug: "proteina-en-el-desayuno",           q: "eggs yogurt breakfast high protein food morning" },
+  { cat: "entrenamiento", slug: "como-aumentar-fuerza-rapido",       q: "barbell squat heavy gym strength athlete" },
+  { cat: "suplementos",   slug: "ashwagandha-deportistas",           q: "adaptogen herb supplement capsules natural" },
+  { cat: "perder-peso",   slug: "como-mantener-peso-despues-dieta",  q: "healthy balanced diet weight maintenance food" },
+  { cat: "recetas",       slug: "bowl-proteico-pollo-arroz",         q: "chicken rice bowl meal prep healthy food" },
 ];
 
 function fetchJSON(url) {
